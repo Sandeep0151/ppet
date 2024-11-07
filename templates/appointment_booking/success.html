@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="container text-center">
+    <div>
+        <h1 class="m-3 display-5 text-capitalize"><span class="text-primary">Booking</span> <span style="color:#030842;">Successful!</span></h1>
+        <h6 class="text-primary ">Thank you for choosing P-PET Arrival. Your appointment has been confirmed.</h6>
+
+        <h2 class="text-success">Booking ID: {{ appointment.booking_id }}</h2>
+
+            <!-- Save as PDF Button -->
+        <a href="{% url 'download_pdf' booking_id=appointment.booking_id %}" class="btn btn-primary m-2">Save as PDF</a>
+
+    </div>
+</div>
+{% endblock %}

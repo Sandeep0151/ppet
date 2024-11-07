@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="container">
+
+ <h3>Appointment Details</h3>
+
+    <p>Do You Want to Cancel This Appointment <strong>Booking ID:</strong> {{ appointment.booking_id }}</p>
+    <p><strong>Name:</strong> {{ appointment.name }}</p>
+    <p>This Appointment Belongs To <strong>Email :</strong> {{appointment.email}}</p>
+    <form method="post" action="{% url 'cancel_booking' %}">
+        {% csrf_token %}
+        <input type="hidden" name="booking_id" value="{{ appointment.booking_id }}">
+        <input type="submit" value="Cancel Appointment">
+    </form>
+</div>
+{% endblock %}

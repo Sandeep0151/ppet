@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <div class="container-fluid bg-light pt-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                        <div class="bg-primary p-0 px-4 px-sm-12">
+                                {% if messages %}
+                                  <div class="alert alert-primary" role="alert">
+                                 {% for message in messages %}
+                                   {{ message }}
+                                   {% endfor %}
+                                  </div>
+                                {% endif %}
+                        <form class="py-5" action="" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input name="username_or_email" type="text" class="form-control border-0 p-4" placeholder="Username or Email" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input name="password" type="text" class="form-control border-0 p-4" placeholder="Password" required="required" />
+                            </div>
+                            <p class="text-light">Don't Have an Account ? <a class="text-light" href="{% url 'register' %}">Register</a></p>
+                            <div>
+                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Login</button>
+                            </div>
+                        </form>
+                            <a class="text-dark" href="{% url 'forgot_password' %}">Forgot Password ?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

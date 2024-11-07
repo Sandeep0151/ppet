@@ -1,0 +1,283 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<!-- Services Start -->
+<div class="container-fluid bg-light pt-5">
+    <div class="container py-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h1 class="display-5 m-0"><span class="text-primary">OUR SERVICES </span>& RATES</h1>
+            <h4 class="text-secondary mb-3">Caring for Pets, Supporting Pet Lovers</h4>
+            <h5>At P-Pet Arrivals, we are your one-stop destination for a wide range of pet services, tailored to meet
+                the needs of your beloved pets in Winnipeg, Canada. Whether your furry friend requires transportation,
+                exercise, grooming, boarding, or companionship, we have you covered.</h5>
+        </div>
+
+        <div class="row pb-3">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-4">
+                    <h3 class="flaticon-house display-3 font-weight-normal info-button mb-3"></h3>
+                    <h3 class="mb-3">Pet Transportation</h3>
+
+                    <p>We provide comprehensive pet transportation services, ensuring your pet safely reaches their
+                        destination, whether it's a veterinary clinic, dog park, grooming spa, or a boarding
+                        facility.</p>
+
+                    <a class="text-uppercase font-weight-bold" href="{% url 'booking' %}">Book Now</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-4">
+                    <h3 class="flaticon-food display-3 font-weight-normal info-button mb-3"></h3>
+                    <h3 class="mb-3">Pet Walking</h3>
+                    <p>Our experienced team offers pet walking services to ensure your furry friend gets the exercise
+                        they need for their physical and mental well-being.</p>
+
+                    <a class="text-uppercase font-weight-bold" href="{% url 'booking' %}">Book Now</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="d-flex flex-column text-center bg-white mb-2 p-3 p-sm-4">
+                    <h3 class="flaticon-grooming display-3 font-weight-normal info-button mb-3"></h3>
+                    <h3 class="mb-3">Pet Sitting</h3>
+                    <p>When you're away, we provide professional pet sitting services, ensuring your pet is well taken
+                        care of in the comfort of their own home.</p>
+                    <a class="text-uppercase font-weight-bold" href="{% url 'booking' %}">Book Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Services End -->
+
+
+<div class="container">
+    <div class="pt-5">
+        <h3>Additional Services:</h3>
+    </div>
+
+    <div>
+        <h5>Veterinary Clinic Visits:</h5>
+        <p>Regular check-ups, vaccinations, and consultations are vital for your pet's
+            well-being. We transport your pet to and from veterinary clinics, ensuring they receive the necessary
+            medical care.
+
+        </p>
+    </div>
+
+    <div>
+        <h5>Dog Park Excursions: </h5>
+        <p>
+            Exercise and socialization are essential for a dog's physical and mental health. We
+            arrange fun outings to local dog parks, allowing your pet to interact, play, and expend their energy under
+            supervision.
+
+        </p>
+    </div>
+
+    <div>
+        <h5>Grooming Spa Trips:</h5>
+        <p>
+            Pamper your pet with grooming sessions without the hassle of transportation. We safely
+            escort your pet to grooming facilities, ensuring they return home looking and feeling their best.
+
+
+        </p>
+    </div>
+
+    <div>
+        <h5>Boarding Facility Transfers: </h5>
+        <p>
+            Whether you're traveling or need temporary pet care, we facilitate smooth
+            transfers to and from boarding facilities, ensuring your pet stays in a secure and comfortable environment.
+
+        </p>
+    </div>
+</div>
+
+
+<!-- Services Start -->
+<div class="container-fluid bg-light pt-5">
+    <div class="container py-5">
+
+
+        <!-- Pricing Plan Start -->
+        <div class="container-fluid bg-light pt-2 pb-4">
+            <div class="container py-5">
+                <div class="d-flex flex-column text-center mb-5">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-header position-relative border-0 p-0">
+                        <img alt="" class="card-img-top" src="{% static 'img/400x250.jpg' %}">
+                            <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100"
+                                     style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
+                                    <h3 class="text-primary mb-3">Pet Transportation</h3>
+                                    <h1 class="display-4 text-white mb-0">
+                                        <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99<small
+                                            class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                        Hr</small>
+                                    </h1>
+                                </div>
+                        </div>
+                        <div class="card-footer border-0 p-0">
+                                <a class="btn btn-primary btn-block" href="{% url 'booking' %}"
+                                   style="border-radius: 0;">Book Now</a>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="bg-secondary bg-opacity-10 pb-1 pt-4">
+                            <div class="text-center">
+                                <h3 class="text-light">Services & Rates</h3>
+                            </div>
+                            <div class="p-3">
+                                <p>We provide comprehensive pet transportation services, ensuring your pet safely
+                                    reaches their destination, whether it's a veterinary clinic, dog park, grooming spa,
+                                    or a boarding facility.</p>
+                            </div>
+                            <div class="text-center">
+                                <h5 class="text-light">By Appointment Only </h5>
+                                <h6 class="text-light">Monday - Saturday</h6>
+                                    <h6 class="text-light">7.00AM - 8.00PM</h6>
+                            </div>
+
+                            <div class="text-center">
+
+                                <h6 class="text-light"></h6>
+                            </div>
+
+                            <div class="text-center p-3">
+                                <p class="text-light" style="font-size: 16px;"><span class="h5 text-light">Holiday Rates :</span>
+                                    $100/hr there and back. Extra Waiting charges is $15 for an additional 25-30 minutes
+                                    or $30 for each additional 60 minutes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-12 mb-4">
+                        <div class="card border-0">
+                            <div class="card-header position-relative border-0 p-0 mb-4">
+                                <img alt="" class="card-img-top" src="{% static 'img/400x250.jpg' %}">
+                                <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100"
+                                     style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
+                                    <h3 class="text-primary mb-3">Pet Transportation</h3>
+                                    <h1 class="display-4 text-white mb-0">
+                                        <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99<small
+                                            class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                        Hr</small>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="card-body text-center p-0">
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item p-2">$100/hr there and back. Extra Waiting charges is $15
+                                        for an additional 25-30 minutes or $30 for each additional 60 minutes.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer border-0 p-0">
+                                <a class="btn btn-primary btn-block p-3" href="{% url 'booking' %}"
+                                   style="border-radius: 0;">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mb-4">
+                        <div class="card border-0">
+                            <div class="card-header position-relative border-0 p-0 mb-4">
+                                <img alt="" class="card-img-top" src="{% static 'img/price2.jpg' %}">
+                                <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100"
+                                     style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
+                                    <h3 class="text-light mb-3">Dog Walking</h3>
+                                    <h1 class="display-4 text-white mb-0">
+                                        <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>79<small
+                                            class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                        Hr</small>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="card-body text-center p-0">
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item p-2">$50 /hr then $30 for each additional 60 minutes.
+                                        This includes Dog Walking. Dog exercise, and Dog socialization.
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="card-footer border-0 p-0">
+                                <a class="btn btn-secondary btn-block p-3" href="{% url 'booking' %}"
+                                   style="border-radius: 0;">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mb-4">
+                        <div class="card border-0">
+                            <div class="card-header position-relative border-0 p-0 mb-4">
+                                <img alt="" class="card-img-top" src="{% static 'img/price3.jpg' %}">
+                                <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100"
+                                     style="top: 0; left: 0; z-index: 1; background: rgba(0, 0, 0, .5);">
+                                    <h3 class="text-primary mb-3">Pet Sitting</h3>
+                                    <h1 class="display-4 text-white mb-0">
+                                        <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>79<small
+                                            class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                        Hr</small>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="card-body text-center p-0">
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item p-2"> $50 /hr Extra charges $30 for each additional 60
+                                        minutes. This Includes Feeding, and Medications for the pet if any.
+                                    </li>
+                                    <!--<li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Boarding</li>
+                                    <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Spa & Grooming</li>
+                                    <li class="list-group-item p-2"><i class="fa fa-check text-secondary mr-2"></i>Veterinary Medicine</li>-->
+                                </ul>
+                            </div>
+                            <div class="card-footer border-0 p-0">
+                                <a class="btn btn-primary btn-block p-3" href="{% url 'booking' %}"
+                                   style="border-radius: 0;">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pricing Plan End -->
+
+        <!-- Features Start -->
+        <div class="container pt-5">
+            <div class="row align-items-center">
+                <div class="col-lg-12 py-5 py-lg-0 px-3 px-lg-5">
+                    <h4 class="text-secondary mb-3">Need something else that you don't see listed?</h4>
+                    <h4 class="display-4 mb-4"><span class="text-primary">Contact us for a rate quote based on your specific needs!</span>
+                        We are available</h4>
+                    <div class="row py-2">
+                        <div class="col-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <h1 class="flaticon-doctor font-weight-normal text-secondary m-0 mr-3"></h1>
+                                <h5 class="text-truncate m-0">Emergency Services</h5>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="d-flex align-items-center">
+                                <h1 class="flaticon-care font-weight-normal text-secondary m-0 mr-3"></h1>
+                                <h5 class="text-truncate m-0">Special Care</h5>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="d-flex align-items-center">
+                                <h1 class="flaticon-dog font-weight-normal text-secondary m-0 mr-3"></h1>
+                                <h5 class="text-truncate m-0">Customer Support</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features End -->
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>P-Pet Arrivals</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+    <!-- Favicon -->
+    <link href="{% static 'img/favicon.ico' %}" rel="icon">
+
+    <!------ Signature Pad --------->
+    <link rel="stylesheet" href="https://unpkg.com/signature_pad/dist/signature-pad.css">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="{% static 'lib/flaticon/font/flaticon.css' %}" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<!--------------------------------------------------- Index Page Pop Up Image --------------------------------------->
+<!--<style>
+    /* CSS for the modal popup */
+        .modal {
+           display: none;
+           position: fixed;
+           z-index: 1;
+           left: 450px;
+           top: 70px;
+           width: 550px;
+           height: 100%;
+           overflow: hidden;
+           background-color: transparent;
+        }
+        .modal-content {
+           width: auto;
+           height: auto;
+           max-width: 100%;
+           max-height: 100%;
+           position: relative;
+           margin: 0 auto;
+        }
+        .close {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-size: 28px;
+            color: black;
+            cursor: pointer;
+        }
+</style>-->
+<!--------------------------------------------------- Index Page Pop Up Image End --------------------------------------->
+<style>
+    .active {
+    background-color: #007bff; /* Change this to your desired active background color */
+    color: #ffffff; /* Change this to your desired active text color */
+}
+</style>
+
+{% include 'header.html' %}
+{% block content %}
+
+    {% endblock %}
+
+{% include 'footer.html' %}
+
+{% block script %}{% endblock %}
+
+
+<!--<script>
+// JavaScript to show the modal popup and handle the close button click event
+var modal = document.getElementById("myModal");
+var modalContent = document.querySelector(".modal-content");
+var closeButton = document.querySelector(".close");
+
+// Show the modal when the page loads
+window.onload = function() {
+    modal.style.display = "block";
+    // Set modal content size to fit the image
+    modalContent.style.width = modalContent.children[0].width + "px";
+    modalContent.style.height = modalContent.children[0].height + "px";
+};
+
+// Close the modal when the close button is clicked
+closeButton.onclick = function() {
+    modal.style.display = "none";
+};
+
+// Close the modal if the user clicks outside the modal content
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+    </script>-->
+
+
+ <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+    <script src="{% static 'mail/contact.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+<script src="https://unpkg.com/signature_pad/dist/signature_pad.umd.js"></script>
+<script>
+    var canvas = document.getElementById('signature-pad');
+    var signaturePad = new SignaturePad(canvas, {
+        backgroundColor: '#dcdcdc', // set pad background color
+        penColor: 'black', // set pen color
+        minWidth: 1, // set minimum width of the pen
+        maxWidth: 2 // set maximum width of the pen
+    });
+
+    // Clear button functionality
+    var clearButton = document.getElementById('clear-button');
+    clearButton.addEventListener('click', function() {
+        signaturePad.clear();
+    });
+
+    // Handle form submission to save the signature as an image
+    document.querySelector('form').addEventListener('submit', function(event) {
+        // Convert the signature to a data URL and add it as a hidden input field to the form
+        var signatureDataUrl = signaturePad.toDataURL();
+        var signatureInput = document.createElement('input');
+        signatureInput.type = 'hidden';
+        signatureInput.name = 'signature';
+        signatureInput.value = signatureDataUrl;
+        this.appendChild(signatureInput);
+    });
+</script>
+
+
+<script>
+var canvas = document.getElementById('signature-pad');
+var signaturePad = new SignaturePad(canvas);
+var confirmButton = document.getElementById('confirm-button');
+var signatureInput = document.getElementById('signature-input');
+
+confirmButton.addEventListener('click', function() {
+    if (signaturePad.isEmpty()) {
+        alert('Please provide your signature first.');
+    } else {
+        var signatureDataUrl = signaturePad.toDataURL();
+        signatureInput.value = signatureDataUrl;
+        // Now, you can submit the form or process the signature data further
+    }
+});
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var currentUrl = window.location.href;
+
+        var links = document.querySelectorAll(".nav-item.nav-link");
+        links.forEach(function(link) {
+            if (link.href === currentUrl) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    });
+</script>

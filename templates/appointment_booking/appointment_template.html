@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            color: #007bff;
+        }
+        .appointment-info {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 150px;
+            border-top: 1px solid #dddddd;
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .footer-logo {
+            margin-right: 20px;
+        }
+        .footer-details {
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Appointment Details</h1>
+    </div>
+    <div class="appointment-info">
+        <p><strong>Booking ID:</strong> {{ appointment.booking_id }}</p>
+        <p><strong>Name:</strong> {{ appointment.name }}</p>
+        <p><strong>Email:</strong> {{ appointment.email }}</p>
+        <p><strong>Phone Number:</strong> {{ appointment.number }}</p>
+        <p><strong>Pet Type:</strong> {{ appointment.pet }}</p>
+        <div class="appointment-scheduled">
+            <p><strong>Appointment Scheduled On:</strong> {{ appointment.date }} At {{ appointment.time }}</p>
+        </div>
+        <table>
+            <tr>
+                <th>Pet Name</th>
+                <th>Pickup Location</th>
+                <th>Drop Location</th>
+                <th>Selected Service</th>
+            </tr>
+            <tr>
+                <td>{{ appointment.pet_name }}</td>
+                <td>{{ appointment.pickup_location }}</td>
+                <td>{{ appointment.drop_location }}</td>
+                <td>{{ appointment.selected_service }}</td>
+            </tr>
+        </table>
+        <p><strong>Instructions to Driver:</strong> {{ appointment.instructions }}</p>
+    </div>
+
+    <p>Thank You for choosing P-Pet Arrivals where pet travel meets peace of mind. Please Read <a href="https://ppetarrivals.com/terms&conditions/"> terms and conditions</a> carefully. See you and Your loved companions soon </p>
+
+    <p>"Need to cancel your appointment? No worries! <a href="https://ppetarrivals.com/cancel-booking/">Click here </a> to easily cancel your booking and free up the slot for others. We hope to see you next time!"</p>
+
+<div class="footer">
+        <div class="footer-logo">
+            <img src="http://ppetarrivals.com/static/img/logo.jpg" alt="Company Logo" style="width: 100px;">
+        </div>
+        <div class="footer-details">
+            <p><strong>Phone:</strong> <a href="tel:+1(431) 557-1000"> +1(431) 557-1000</a></p>
+            <p><strong>Email:</strong><a href="mailto:p.petarrivals@gmail.com"> p.petarrivals@gmail.com</a></p>
+            <p><strong>Address:</strong>Canada</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--<div class="footer">
+        <p><strong>Company Information:</strong></p>
+        <p><strong>Phone:</strong><a href="tel:+1(431) 557-1000"> +1(431) 557-1000</a></p>
+        <p><strong>Email:</strong><a href="mailto:p.petarrivals@gmail.com"> p.petarrivals@gmail.com</a></p>
+        <p><strong>Address:</strong> Canada</p>
+        <img src="http://192.168.1.8:8000/static/img/logo.jpg" alt="Company Logo" style="width: 100px;">
+    </div>-->
+
+
+
+
+</body>
+</html>

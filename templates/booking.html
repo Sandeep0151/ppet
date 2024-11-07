@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Booking Start -->
+    <div class="container-fluid bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="bg-primary p-0 px-4 px-sm-12">
+                        <form class="py-5" action="{% url 'summary' %}" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input name="name" type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input name="email" type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input name="number" type="number" class="form-control border-0 p-4" placeholder="Your Mobile Number" required="required" />
+                            </div>
+                           <div class="form-group">
+                                <select name="pet" class="custom-select border-0 px-4" style="height: 47px;">
+                                    <option selected>Select Pet</option>
+                                    <option value="Dog">Dog</option>
+                                    <option value="Cat">Cat</option>
+                                    <option value="Rabbit">Rabbit</option>
+                                    <option value="Bird">Bird</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input name="pet_name" type="text" class="form-control border-0 p-4" placeholder="Your Pet Name" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input name="pickup_location" type="text" class="form-control border-0 p-4" placeholder="Pickup Location" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input name="drop_location" type="text" class="form-control border-0 p-4" placeholder="Drop Location" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <div class="date" id="date" data-target-input="nearest">
+                                    <input name="date" type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Date" data-target="#date" data-toggle="datetimepicker"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="time" id="time" data-target-input="nearest">
+                                    <input name="time" type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Time" data-target="#time" data-toggle="datetimepicker"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <select name="selected_service" class="custom-select border-0 px-4" style="height: 47px;">
+                                    <option selected>Select Service</option>
+                                    <option value="Pet Transportation">Pet Transportation</option>
+                                    <option value="Pet Walking">Pet Walking</option>
+                                    <option value="Pet Sitting">Pet Sitting</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="instructions" class="form-control border-0 p-4" placeholder="Anything else the driver will need to know." required="required"></textarea>
+                            </div>
+                            <span class="text-light"><input checked type="checkbox"> I Agree all the Terms&Conditions and Privacy Policy</span>
+                            <div>
+                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
+                    <h4 class="text-secondary mb-3">Your Pet's Health is Our Priority</h4>
+                    <h1 class="display-4 mb-4">Ride With <span class="text-primary">P-Pet Arrival</span></h1>
+                    <div class="col-12 row">
+                        <div class="col-4">
+                            <p>Taxi To and From</p>
+                        </div>
+                        <div class="col-4">
+                            <p>Dog Walking</p>
+                        </div>
+                        <div class="col-4">
+                            <p>Dog Sitting</p>
+                        </div>
+
+                    </div>
+                    <div class="row py-2">
+                        <div class="col-sm-12">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center mb-2">
+                                    <h1 class="flaticon-house font-weight-normal info-button m-0 mr-3"></h1>
+                                    <h5 class="text-truncate m-0">Veterinary appointments</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center mb-2">
+                                    <h1 class="flaticon-food font-weight-normal info-button m-0 mr-3"></h1>
+                                    <h5 class="text-truncate m-0">Grooming appointments</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center mb-2">
+                                    <h1 class="flaticon-grooming font-weight-normal info-button m-0 mr-3"></h1>
+                                    <h5 class="text-truncate m-0">Kennel or boarding</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="d-flex flex-column">
+                                <div class="d-flex align-items-center mb-2">
+                                    <h1 class="flaticon-toy font-weight-normal info-button m-0 mr-3"></h1>
+                                    <h5 class="text-truncate m-0">Friend or family member’s house</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Booking Start -->
+
+
+{% endblock %}
